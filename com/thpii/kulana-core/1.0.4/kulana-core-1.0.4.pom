@@ -19,7 +19,7 @@
 	<repositories>
 		<repository>
 			<id>test-executer-client</id>
-			<url>https://github.com/qaprosoft/test-executer-client/raw/master</url>
+			<url>https://raw.github.com/qaprosoft/test-executer-client/master</url>
 		</repository>
 		<repository>
 			<id>soapui-java-client</id>
@@ -189,7 +189,7 @@
 		<dependency>
 			<groupId>com.qaprosoft</groupId>
 			<artifactId>soapui-java-client</artifactId>
-			<version>1.1</version>
+			<version>1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-cli</groupId>
@@ -224,10 +224,29 @@
 		</dependency>
 	</dependencies>
 
+
 	<distributionManagement>
 		<repository>
 			<id>maven-repository</id>
 			<url>${github.maven.repository}</url>
 		</repository>
 	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.kulana.core.foundation.AbstractTest</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
