@@ -21,6 +21,10 @@
 			<id>test-executer-client</id>
 			<url>https://github.com/qaprosoft/test-executer-client/raw/master</url>
 		</repository>
+		<repository>
+			<id>soapui-java-client</id>
+			<url>https://raw.github.com/qaprosoft/soapui-java-client/master</url>
+		</repository>
 	</repositories>
 
 
